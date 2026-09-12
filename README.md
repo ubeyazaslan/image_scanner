@@ -39,10 +39,18 @@ Make sure you have [Python 3.x](https://www.python.org/downloads/) installed on 
 It is recommended to use a virtual environment. Install the required Python packages using pip:
   ```bash
   pip install -r requirements.txt
-
+   ```
 ####  Run the application:
+   ```bash
     python app.py
-
+   ```
 #### Open in Browser:
 Open your favorite web browser and navigate to:
+   ```bash
   http://localhost:5050
+   ```
+
+Instead of relying on file names or metadata, this application calculates the MD5 hash of the actual file contents. To optimize performance and memory usage, especially for large RAW or TIFF files, the files are read in 64KB blocks. If two files have the exact same hash, they are mathematically identical copies, even if their names or extensions differ.
+
+## 📄 License
+This project is open-source and available under the MIT License.
